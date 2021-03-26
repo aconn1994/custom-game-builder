@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-checkbox [checked]="showMaps" class="showMapsCheckbox" (change)="showMapForm()">Add Maps to Scramble</mat-checkbox>
+    <div *ngIf="showMaps">
+        <mat-card-header>
+            <span class="field-group">
+                <h3 mat-h3>Choose your Maps</h3>
+                <filter-select class="fg-one-quarter" [filters]="filterTypes" [type]="type" (filter)="filterData($event)"></filter-select>
+                <button *ngIf="!!!allChecked" mat-raised-button class="fg-one-quarter" class="checkAll" color="accent" (click)="checkAll()">Check All Maps</button>
+                <button *ngIf="allChecked" mat-raised-button class="fg-one-quarter" class="checkAll" color="accent" (click)="checkAll()">Uncheck All Maps</button>
+            </span>
+        </mat-card-header>
+        <mat-card-content class="field-group">
+            <span class="fg-one-fifth" *ngFor="let map of mapData">
+                <mat-checkbox [checked]="allChecked" [value]="map.name" (change)="updateForm(map.name)">{{ map.name }}
+                </mat-checkbox>
+            </span>
+        </mat-card-content>
+    </div>
+</mat-card>

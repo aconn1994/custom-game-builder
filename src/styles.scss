@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// * {
+//     color: #FFDC00;
+// }
+
+.field-group {
+    width: 100%;
+
+    &>*[class^="fg-"] {
+        padding: 0 16px;
+        display: inline-block;
+    }
+
+    .fg-full {
+        width: 100%;
+    }
+
+    .fg-three-quarter {
+        width: 75%;
+        min-width: 375px;
+    }
+
+    .fg-one-half {
+        width: 50%;
+        min-width: 200px;
+    }
+
+    .fg-one-third {
+        width: calc(100%/3);
+        min-width: 150px;
+    }
+
+    .fg-one-quarter {
+        width: 25%;
+        min-width: 125px;
+    }
+
+    .fg-one-fifth {
+        width: 20%;
+        min-width: 100px;
+    }
+}
+
+.right-align {
+    float: right;
+}
+
+.colorCode {
+    color: #FFDC00;
+    background-color: #8232CB;
+}
+
+.background-yellow {
+    background-color: #FFDC00;
+}
+
+.background-purple {
+    background-color: #8232CB;
+}
+
+.text-yellow {
+    color: #FFDC00;
+}
+
+.text-purple {
+    color: #8232CB;
+}

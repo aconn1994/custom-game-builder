@@ -1,0 +1,19 @@
+<mat-toolbar class="colorCode">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="header" routerLink="/" (click)="sidenav.close()">Custom Game Randomizer</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidenav mode="push">
+        <mat-nav-list>
+          <navigation-buttons (click)="sidenav.close()"></navigation-buttons>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="body">
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

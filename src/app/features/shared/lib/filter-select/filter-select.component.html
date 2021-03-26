@@ -1,0 +1,7 @@
+<mat-form-field>
+    <mat-label>Filter By</mat-label>
+    <mat-select [formControl]="filterList">
+        <mat-option [value]="null" (click)="sendFilter()">-</mat-option>
+        <mat-option *ngFor="let filter of data" [value]="filter" (click)="sendFilter()">{{ filter }}</mat-option>
+    </mat-select>
+</mat-form-field>

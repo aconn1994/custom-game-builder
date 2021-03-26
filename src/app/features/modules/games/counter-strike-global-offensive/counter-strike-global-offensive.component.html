@@ -1,0 +1,9 @@
+<h1 class="mat-h1">Build Your Counter-Strike: Global Offensive Game</h1>
+
+<players [showRoles]="false" (playersList)="updatePlayersList($event)"></players>
+<br>
+<br>
+<map [mapList]="mapsData" [filterTypes]="filters" type="map" (filter)="getFilteredMaps($event)" (maps)="pickedMaps($event)"></map>
+<br>
+<br>
+<display-game-data [playersForTeams]="playersForTeams" [mapPool]="mapsForGame"></display-game-data>

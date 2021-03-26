@@ -1,0 +1,37 @@
+<button mat-raised-button color="primary" (click)="scramble()" class="main-button">
+    <p>Scamble All</p>
+</button>
+<br>
+<br>
+<mat-card *ngIf="playersAreScrambled && mapPool" class="card">
+    <mat-card-content>
+        <p>Map: {{ map }}</p>
+        <button mat-raised-button color="accent" (click)="mapScramble()">Map Scramble</button>
+    </mat-card-content>    
+</mat-card>
+<div *ngIf="playersAreScrambled">
+    <div class="teamsTable">
+        <mat-card class="column">
+            <mat-card-header>
+                <mat-card-title class="title">Team 1</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p *ngFor="let player of teamOne" class="list">
+                    {{ player }}
+                </p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="column">
+            <mat-card-header>
+                <mat-card-title class="title">Team 2</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p *ngFor="let player of teamTwo" class="list">
+                    {{ player }}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <br>
+    <button mat-raised-button color="accent" (click)="playerScramble()">Player Scramble</button>
+</div>

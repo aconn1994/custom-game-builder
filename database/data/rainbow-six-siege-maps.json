@@ -1,0 +1,140 @@
+{
+    "rainbow_six_siege": {
+        "maps": {
+            "filter_types": [
+                "Newcomer",
+                "Casual",
+                "Ranked",
+                "Custom Game Only"
+            ],
+            "maps": {
+                "bank": {
+                    "name": "Bank",
+                    "newcomer": true,
+                    "ranked": true,
+                    "casual": true,
+                    "customOnly": false
+                },
+                "bartlett": {
+                    "name": "Bartlett U.",
+                    "ranked": false,
+                    "newcomer": false,
+                    "casual": false,
+                    "customOnly": true
+                },
+                "border": {
+                    "ranked": true,
+                    "customOnly": false,
+                    "name": "Border",
+                    "newcomer": false,
+                    "casual": true
+                },
+                "chalet": {
+                    "name": "Chalet",
+                    "casual": true,
+                    "ranked": true,
+                    "newcomer": true,
+                    "customOnly": false
+                },
+                "club_house": {
+                    "casual": true,
+                    "name": "Club House",
+                    "newcomer": false,
+                    "customOnly": false,
+                    "ranked": true
+                },
+                "coastline": {
+                    "newcomer": false,
+                    "casual": true,
+                    "name": "Coastline",
+                    "ranked": true,
+                    "customOnly": false
+                },
+                "consulate": {
+                    "name": "Consulate",
+                    "newcomer": true,
+                    "ranked": true,
+                    "casual": true,
+                    "customOnly": false
+                },
+                "favela": {
+                    "newcomer": false,
+                    "casual": false,
+                    "name": "Favela",
+                    "ranked": false,
+                    "customOnly": true
+                },
+                "fortress": {
+                    "customOnly": true,
+                    "casual": false,
+                    "name": "Fortress",
+                    "newcomer": false,
+                    "ranked": false
+                },
+                "hereford_base": {
+                    "ranked": false,
+                    "name": "Hereford Base",
+                    "customOnly": true,
+                    "newcomer": false,
+                    "casual": false
+                },
+                "house": {
+                    "name": "House",
+                    "customOnly": false,
+                    "ranked": true,
+                    "casual": true,
+                    "newcomer": false
+                },
+                "kafe_dostroyevsky": {
+                    "name": "Kafe Dostroyevsky",
+                    "casual": true,
+                    "customOnly": false,
+                    "ranked": true,
+                    "newcomer": false
+                },
+                "kanal": {
+                    "casual": true,
+                    "ranked": true,
+                    "customOnly": false,
+                    "newcomer": false,
+                    "name": "Kanal"
+                },
+                "outback": {
+                    "name": "Outback",
+                    "casual": true,
+                    "newcomer": false,
+                    "customOnly": false,
+                    "ranked": true
+                },
+                "presidential_plane": {
+                    "casual": false,
+                    "customOnly": true,
+                    "name": "Presidential Plane",
+                    "ranked": false,
+                    "newcomer": false
+                },
+                "theme_park": {
+                    "ranked": true,
+                    "newcomer": false,
+                    "name": "Theme Park",
+                    "casual": true,
+                    "customOnly": false
+                },
+                "tower": {
+                    "newcomer": false,
+                    "ranked": false,
+                    "casual": false,
+                    "customOnly": true,
+                    "name": "Tower"
+                },
+                "villa": {
+                    "casual": true,
+                    "ranked": true,
+                    "customOnly": false,
+                    "newcomer": false,
+                    "name": "Villa"
+                }
+            }
+        }
+    }
+}
