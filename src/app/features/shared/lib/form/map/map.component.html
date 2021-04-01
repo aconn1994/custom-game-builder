@@ -4,12 +4,10 @@
         <mat-card-header>
             <div class="field-group">
                 <h3 mat-h3>Choose your Maps</h3>
-                <div class="fg-one-quarter">
                     <filter-select [filters]="filterTypes" [type]="type" (filter)="filterData($event)"></filter-select>
-                </div>
-                <div class="fg-one-quarter">
-                    <button *ngIf="!!!allChecked" mat-raised-button class="checkAll" color="accent" (click)="checkAll()">Check All Maps</button>
-                    <button *ngIf="allChecked" mat-raised-button class="checkAll" color="accent" (click)="checkAll()">Uncheck All Maps</button>
+                <div class="fg-one-quarter checkAll">
+                    <button *ngIf="!!!allChecked" mat-raised-button color="accent" (click)="checkAll()">Check All Maps</button>
+                    <button *ngIf="allChecked" mat-raised-button color="accent" (click)="checkAll()">Uncheck All Maps</button>
                 </div>
             </div>
         </mat-card-header>

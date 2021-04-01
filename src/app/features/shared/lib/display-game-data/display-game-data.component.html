@@ -1,4 +1,4 @@
-<div *ngIf="!!!playersAreScrambled">
+<div *ngIf="!!!playersAreScrambled" class="scramble-button">
     <button mat-raised-button color="primary" (click)="scramble()" class="main-button">
         <p>Scamble All</p>
     </button>
@@ -11,7 +11,7 @@
 </mat-card>
 <br>
 <div *ngIf="playersAreScrambled">
-    <div class="player-scramble-button">
+    <div class="scramble-button">
         <button mat-raised-button color="accent" (click)="playerScramble()">Player Scramble</button>
     </div>
     <div class="teamsTable">

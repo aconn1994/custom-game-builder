@@ -21,9 +21,13 @@
 }
 
 .main-button {
-    margin-left: 30%;
-    width: 500px;
+    width: 35%;
     height: 100px;
+}
+
+.scramble-button {
+    display: flex;
+    justify-content: center;
 }
 
 .title {
@@ -33,9 +37,4 @@
 
 p {
     font-size: large;
-}
-
-.player-scramble-button {
-    display: flex;
-    justify-content: center;
 }
