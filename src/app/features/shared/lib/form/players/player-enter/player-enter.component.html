@@ -9,9 +9,9 @@
             <h3>Players:</h3>
         </mat-card-header>
         <mat-card-content>
-            <div *ngFor="let player of playerList.value; let i = index">
-                <p>Player {{ i + 1 }}: {{ player }}</p>
-            </div>
+            <ul *ngFor="let player of playerList.value; let i = index">
+                <li>{{ player }}</li>
+            </ul>
         </mat-card-content>
     </mat-card>
 </div>

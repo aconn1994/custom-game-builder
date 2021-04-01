@@ -19,7 +19,6 @@ import { HomeComponent } from './features/modules/base/home/home.component';
 import { DisplayGameDataComponent } from './features/shared/lib/display-game-data/display-game-data.component';
 import { RainbowSixSiegeComponent } from './features/modules/games/rainbow-six-siege/rainbow-six-siege.component';
 import { MapComponent } from './features/shared/lib/form/map/map.component';
-import { PlayersComponent } from './features/shared/lib/form/players/players.component';
 import { NavigationButtonsComponent } from './features/shared/lib/navigation-buttons/navigation-buttons.component';
 import { FilterSelectComponent } from './features/shared/lib/filter-select/filter-select.component';
 import { RoleComponent } from './features/shared/lib/form/role/role.component';
@@ -33,7 +32,6 @@ import { PlayerEnterDialogComponent } from './features/shared/lib/form/players/p
     NavbarComponent,
     CustomGameComponent,
     HomeComponent,
-    PlayersComponent,
     PlayerEnterComponent,
     PlayerEnterDialogComponent,
     DisplayGameDataComponent,

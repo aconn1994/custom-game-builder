@@ -3,14 +3,13 @@
         <p>Scamble All</p>
     </button>
 </div>
-<br>
-<br>
 <mat-card *ngIf="playersAreScrambled && mapPool" class="card">
     <mat-card-content>
         <p>Map: {{ map }}</p>
         <button mat-raised-button color="accent" (click)="mapScramble()">Map Scramble</button>
     </mat-card-content>    
 </mat-card>
+<br>
 <div *ngIf="playersAreScrambled">
     <div class="player-scramble-button">
         <button mat-raised-button color="accent" (click)="playerScramble()">Player Scramble</button>
