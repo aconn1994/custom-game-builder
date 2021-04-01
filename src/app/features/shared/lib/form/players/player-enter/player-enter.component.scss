@@ -1,0 +1,34 @@
+mat-card {
+    margin: auto;
+    max-width: 300px;
+    max-height: 500px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+mat-card:hover{
+    background-color: #FFDC00;
+}
+
+mat-card-title {
+    text-align: center;
+    margin: auto;
+}
+
+.cardBorder {
+    margin: auto;
+    border-style: dotted;
+    height: 200px;
+    width: 200px;
+    color: #8232CB;
+}
+
+.tableBorder {
+    margin: auto;
+    border-style: dotted;
+    color: #8232CB;
+}
+
+p {
+    text-align: center;
+}

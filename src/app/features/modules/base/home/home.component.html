@@ -1,6 +1,6 @@
 <div class="border container">
     <h2>Choose your Game!</h2>
-    <div class="center" *ngFor="let game of gameData">
-        <button mat-raised-button color="primary" routerLink='{{ game.path }}'>{{ game.name }}</button>
+    <div class="game-button" *ngFor="let game of gameData">
+        <button mat-flat-button color="primary" routerLink='{{ game.path }}'>{{ game.name }}</button>
     </div>
 </div>

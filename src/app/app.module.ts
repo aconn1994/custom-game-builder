@@ -1,3 +1,4 @@
+import { PlayerEnterComponent } from './features/shared/lib/form/players/player-enter/player-enter.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RouterModule } from '@angular/router';
 import { NgMaterialModule } from './modules/ng-material.module';
@@ -24,6 +25,7 @@ import { FilterSelectComponent } from './features/shared/lib/filter-select/filte
 import { RoleComponent } from './features/shared/lib/form/role/role.component';
 import { LeagueOfLegendsComponent } from './features/modules/games/league-of-legends/league-of-legends.component';
 import { CounterStrikeGlobalOffensiveComponent } from './features/modules/games/counter-strike-global-offensive/counter-strike-global-offensive.component';
+import { PlayerEnterDialogComponent } from './features/shared/lib/form/players/player-enter-dialog/player-enter-dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { CounterStrikeGlobalOffensiveComponent } from './features/modules/games/
     CustomGameComponent,
     HomeComponent,
     PlayersComponent,
+    PlayerEnterComponent,
+    PlayerEnterDialogComponent,
     DisplayGameDataComponent,
     NavigationButtonsComponent,
     RainbowSixSiegeComponent,

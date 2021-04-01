@@ -1,3 +1,7 @@
+button:hover {
+  background-color: #FFDC00
+}
+
 .border {
   border-style: dotted;
   padding: 50px;
@@ -13,7 +17,7 @@
   transform: translate(-50%, -50%);
 }
 
-.center {
+.game-button {
     text-align: center;
 }
 

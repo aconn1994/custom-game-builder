@@ -1,0 +1,19 @@
+<h2 mat-h2>Enter your Players</h2>
+<div class="form-fields" *ngFor="let control of playerList.controls; index as i">
+        <mat-form-field>
+                <mat-label>Player {{ i + 1 }}</mat-label>
+                <input matInput type="text" [formControl]="playerList.controls[i]" (keyup)="updateList()">
+        </mat-form-field>
+        <button mat-mini-fab color="accent" (click)="removePlayer(i)">
+                <mat-icon>delete</mat-icon>
+        </button>
+        <!-- <role *ngIf="roleChecked" [roleList]="roleList"></role> -->
+</div>
+<div>
+        <button mat-stroked-button color="accent" (click)="addPlayer()">Add Player</button>
+</div>
+<br>
+<span class="done">
+        <button mat-raised-button color="warn" (click)="closeDialog()">Close</button>
+        <button mat-raised-button color="primary" [mat-dialog-close]="playerList" cdkFocusInitial>Done</button>
+</span>
