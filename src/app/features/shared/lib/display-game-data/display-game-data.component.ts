@@ -1,4 +1,3 @@
-import { Teams } from './../../constants/models/team.model';
 import { RandomService } from '../../../services/random.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
@@ -20,10 +19,9 @@ export class DisplayGameDataComponent implements OnInit {
   @Input() public playersForTeams: FormArray;
   @Input() public mapPool?: any;
 
-  // teamOne: Array<string>;
-  // teamTwo: Array<string>;
-  teams: Teams;
-  displayedColumns = ['teamOne', 'teamTwo'];
+  teamOne: Array<string>;
+  teamTwo: Array<string>;
+  teamArray = ['teamOne', 'teamTwo'];
 
   map: any;
   table: any;
@@ -33,18 +31,15 @@ export class DisplayGameDataComponent implements OnInit {
     private randomService: RandomService
   ) {
     this.table = [];
-    this.teams = {
-      teamOne: [],
-      teamTwo: []
-    };
   }
 
   ngOnInit(): void {
-    // this.teamOne = [];
-    // this.teamTwo = [];
+    this.teamOne = [];
+    this.teamTwo = [];
   }
 
   scramble() {
+    this.playersAreScrambled = true;
     this.playerScramble();
 
     if (this.mapPool) {
@@ -53,53 +48,23 @@ export class DisplayGameDataComponent implements OnInit {
   }
 
   chooseTeam(player) {
-    if (this.teams.teamOne.length === this.teams.teamTwo.length) {
-      const randomTeam = this.randomService.randomValue(this.displayedColumns);
+    if (this.teamOne.length === this.teamTwo.length) {
+      const randomTeam = this.randomService.randomValue(this.teamArray);
       if (randomTeam === 'teamOne') {
-        this.teams.teamOne.push(player);
+        this.teamOne.push(player);
       } else if (randomTeam === 'teamTwo') {
-        this.teams.teamTwo.push(player);
+        this.teamTwo.push(player);
       }
-    } else if (this.teams.teamOne.length > this.teams.teamTwo.length) {
-      this.teams.teamTwo.push(player);
-    } else if (this.teams.teamTwo.length > this.teams.teamOne.length) {
-      this.teams.teamOne.push(player);
-    }
-    this.formatTeamsToMatTable(this.teams);
-    this.playersAreScrambled = true;
-  }
-
-  formatTeamsToMatTable(players: Teams) {
-    for (const teamOnePlayer of players.teamOne) {
-      for (const teamTwoPlayer of players.teamTwo) {
-        const playerObject = {
-          teamOne: teamOnePlayer,
-          teamTwo: teamTwoPlayer
-        }
-        this.table.push(playerObject);
-        console.log(this.table);
-      }
+    } else if (this.teamOne.length > this.teamTwo.length) {
+      this.teamTwo.push(player);
+    } else if (this.teamTwo.length > this.teamOne.length) {
+      this.teamOne.push(player);
     }
   }
-
-  // chooseTeam(player) {
-  //   if (this.teamOne.length === this.teamTwo.length) {
-  //     const randomTeam = this.randomService.randomValue(this.teamArray);
-  //     if (randomTeam === 'teamOne') {
-  //       this.teamOne.push(player);
-  //     } else if (randomTeam === 'teamTwo') {
-  //       this.teamTwo.push(player);
-  //     }
-  //   } else if (this.teamOne.length > this.teamTwo.length) {
-  //     this.teamTwo.push(player);
-  //   } else if (this.teamTwo.length > this.teamOne.length) {
-  //     this.teamOne.push(player);
-  //   }
-  // }
 
   clear() {
-    // this.teamOne = [];
-    // this.teamTwo = [];
+    this.teamOne = [];
+    this.teamTwo = [];
   }
 
   playerScramble() {
