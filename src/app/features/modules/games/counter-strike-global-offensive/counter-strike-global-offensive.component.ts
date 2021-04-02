@@ -1,6 +1,9 @@
+import { CsgoFilter, CsgoInfo } from './../../../shared/constants/models/games/csgo.model';
 import { CounterStrikeGlobalOffensiveService } from './../../../services/counter-strike-global-offensive.service';
 import { FormArray } from '@angular/forms';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CsgoMap } from 'src/app/features/shared/constants/models/games/csgo.model';
 
 @Component({
   selector: 'counter-strike-global-offensive',
@@ -10,15 +13,17 @@ import { Component } from '@angular/core';
 export class CounterStrikeGlobalOffensiveComponent {
 
   playersForTeams: FormArray;
-  mapsData: any;
-  filters: any;
+  mapsData: Observable<CsgoMap[]>;
+  filters: Observable<CsgoFilter>;
+  info: Observable<CsgoInfo>;
   mapsForGame: Array<string>;
 
   constructor(
     private csgoService: CounterStrikeGlobalOffensiveService
   ) {
+    this.info = this.csgoService.getCsgoInfo();
     this.mapsData = this.csgoService.getMaps(null);
-    this.filters = this.csgoService.getDataTypes('filters');
+    this.filters = this.csgoService.getCsgoFilters();
   }
 
   updatePlayersList(players: any) {

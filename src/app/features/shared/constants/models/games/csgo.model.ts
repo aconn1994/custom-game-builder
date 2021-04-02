@@ -4,3 +4,11 @@ export interface CsgoMap {
     reserve: boolean;
     hostage: boolean
 }
+
+export interface CsgoFilter {
+    map: Array<string>;
+}
+
+export interface CsgoInfo {
+    title: string;
+}

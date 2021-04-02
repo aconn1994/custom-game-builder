@@ -1,6 +1,7 @@
-<h1 class="mat-h1">Build Your League of Legends Game</h1>
-
-<player-enter [showRoles]="true" [roleList]="roleData" (playersList)="updatePlayersList($event)"></player-enter>
-<br>
-<br>
-<display-game-data [playersForTeams]="playersForTeams"></display-game-data>
+<div *ngIf="info | async as info">
+    <h1 class="mat-h1">Build Your {{ info.title }} Game</h1>
+    <player-enter [showRoles]="true" [roleList]="roleData" (playersList)="updatePlayersList($event)"></player-enter>
+    <br>
+    <br>
+    <display-game-data [playersForTeams]="playersForTeams"></display-game-data>
+</div>

@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { R6SiegeMap, R6SiegeFilter, R6SiegeInfo } from './../../../shared/constants/models/games/r6-siege.model';
 import { Component } from '@angular/core';
 import { FormArray } from '@angular/forms';
 import { RainbowSixSiegeService } from 'src/app/features/services/rainbow-six-siege.service';
@@ -10,15 +12,17 @@ import { RainbowSixSiegeService } from 'src/app/features/services/rainbow-six-si
 export class RainbowSixSiegeComponent {
 
   playersForTeams: FormArray;
-  mapsData: any;
-  filters: any;
+  mapsData: Observable<R6SiegeMap[]>;
+  filters: Observable<R6SiegeFilter>;
   mapsForGame: Array<string>;
+  info: Observable<R6SiegeInfo>;
 
   constructor(
     private r6Service: RainbowSixSiegeService
   ) {
+    this.info = this.r6Service.getR6SiegeInfo();
     this.mapsData = this.r6Service.getMaps(null);
-    this.filters = this.r6Service.getDataTypes('filters');
+    this.filters = this.r6Service.getR6SiegeFilters();
   }
 
   updatePlayersList(players: any) {

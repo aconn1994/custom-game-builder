@@ -1,7 +1,10 @@
-<h1 class="mat-h1">Build Your Rainbow Six Siege Game</h1>
-<player-enter [showRoles]="false" (playersList)="updatePlayersList($event)"></player-enter>
-<br>
-<map [mapList]="mapsData" [filterTypes]="filters" type="map" (filter)="getFilteredMaps($event)" (maps)="pickedMaps($event)"></map>
-<br>
-<br>
-<display-game-data [playersForTeams]="playersForTeams" [mapPool]="mapsForGame"></display-game-data>
+<div *ngIf="info | async as info">
+    <h1 class="mat-h1">Build Your {{ info.title }} Game</h1>
+    <player-enter [showRoles]="false" (playersList)="updatePlayersList($event)"></player-enter>
+    <br>
+    <map [mapList]="mapsData" [filterTypes]="filters" type="map" (filter)="getFilteredMaps($event)"
+        (maps)="pickedMaps($event)"></map>
+    <br>
+    <br>
+    <display-game-data [playersForTeams]="playersForTeams" [mapPool]="mapsForGame"></display-game-data>
+</div>
