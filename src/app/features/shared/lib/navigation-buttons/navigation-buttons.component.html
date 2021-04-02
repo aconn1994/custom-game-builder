@@ -1,6 +1,6 @@
 
 <!-- <p>nav-buttons</p> -->
-<div *ngFor="let game of gameData">
-    <a mat-list-item routerLink='{{ game.path }}'>{{ game.name }}</a>
+<div class="button" *ngFor="let game of gameData">
+    <button mat-stroked-button routerLink='{{ game.path }}'>{{ game.name }}</button>
 </div>
 
