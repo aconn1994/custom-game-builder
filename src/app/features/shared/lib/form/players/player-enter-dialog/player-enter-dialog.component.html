@@ -2,7 +2,7 @@
 <div class="form-fields" *ngFor="let control of playerList.controls; index as i">
         <mat-form-field>
                 <mat-label>Player {{ i + 1 }}</mat-label>
-                <input matInput type="text" [formControl]="playerList.controls[i]">
+                <input class="input" matInput type="text" [formControl]="playerList.controls[i]">
         </mat-form-field>
         <button mat-mini-fab color="accent" (click)="removePlayer(i)">
                 <mat-icon>delete</mat-icon>
@@ -13,7 +13,7 @@
         <button mat-stroked-button color="accent" (click)="addPlayer()">Add Player</button>
 </div>
 <br>
-<span class="done">
-        <button mat-raised-button color="warn" (click)="closeDialog()">Close</button>
-        <button mat-raised-button color="primary" [mat-dialog-close]="playerList" cdkFocusInitial>Done</button>
-</span>
+<div class="field-group fg-buttons">
+        <button class="fg-one-sixth" mat-stroked-button color="warn" (click)="closeDialog()">Close</button>
+        <button class="fg-one-sixth" mat-stroked-button color="primary" [mat-dialog-close]="playerList" cdkFocusInitial>Done</button>
+</div>

@@ -3,7 +3,23 @@ mat-card {
     width: 50%;
 }
 
+// mat-checkbox {
+//     color: #B71C1C;
+// }
+
+h2 {
+    color: #B71C1C;
+}
+
 .checkAll {
     display: flex;
     justify-content: center;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    mat-card {
+        margin: auto;
+    }
 }

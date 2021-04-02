@@ -51,6 +51,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         width: 20%;
         min-width: 100px;
     }
+
+    .fg-one-sixth {
+        width: 15%;
+        min-width: 75px;
+    }
+
+    &.fg-buttons {
+        width: 100%;
+        text-align: right;
+
+        button {
+            margin: 0 16px 0 0;
+        }
+    }
 }
 
 .right-align {
@@ -59,20 +73,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .colorCode {
     color: #B71C1C;
-}
-
-.background-yellow {
-    background-color: #FFDC00;
-}
-
-.background-purple {
-    background-color: #8232CB;
-}
-
-.text-yellow {
-    color: #FFDC00;
-}
-
-.text-purple {
-    color: #8232CB;
 }

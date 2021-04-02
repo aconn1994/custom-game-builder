@@ -7,7 +7,7 @@ mat-card {
 }
 
 mat-card:hover{
-    // background-color: #FFDC00;
+    background-color: #558B2F;
 }
 
 mat-card-title {
@@ -15,7 +15,20 @@ mat-card-title {
     margin: auto;
 }
 
-mat-card-content {
+// mat-card-content {
+//     margin: 0;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
+
+mat-icon {
+    transform: scale(5);
+    // color: #8232CB;
+}
+
+.add-card-content {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -23,23 +36,18 @@ mat-card-content {
     transform: translate(-50%, -50%);
 }
 
-mat-icon {
-    transform: scale(5);
-    // color: #8232CB;
-}
-
 .cardBorder {
     margin: auto;
     border-style: dotted;
     height: 200px;
     width: 200px;
-    // color: #8232CB;
+    color: #B71C1C;
 }
 
 .tableBorder {
     margin: auto;
     border-style: dotted;
-    // color: #8232CB;
+    color: #B71C1C;
 }
 
 p {

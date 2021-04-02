@@ -1,16 +1,21 @@
 <mat-card>
-    <mat-checkbox [checked]="showMaps" class="showMapsCheckbox" (change)="showMapForm()">Add Maps to Scramble</mat-checkbox>
+    <mat-checkbox [checked]="showMaps" class="showMapsCheckbox" (change)="showMapForm()">Add Maps to Scramble
+    </mat-checkbox>
     <div *ngIf="showMaps">
-        <mat-card-header>
-            <div class="field-group">
-                <h3 mat-h3>Choose your Maps</h3>
-                    <filter-select [filters]="filterTypes" [type]="type" (filter)="filterData($event)"></filter-select>
+        <div class="field-group">
+            <mat-card-title>
+                <h2 class="fg-one-half" mat-h2>Choose your Maps</h2>
+            </mat-card-title>
+            <mat-card-subtitle>
+                <filter-select [filters]="filterTypes" [type]="type" (filter)="filterData($event)"></filter-select>
                 <div class="fg-one-quarter checkAll">
-                    <button *ngIf="!!!allChecked" mat-raised-button color="accent" (click)="checkAll()">Check All Maps</button>
-                    <button *ngIf="allChecked" mat-raised-button color="accent" (click)="checkAll()">Uncheck All Maps</button>
+                    <button *ngIf="!!!allChecked" mat-stroked-button color="accent" (click)="checkAll()">Check All
+                        Maps</button>
+                    <button *ngIf="allChecked" mat-stroked-button color="accent" (click)="checkAll()">Uncheck All
+                        Maps</button>
                 </div>
-            </div>
-        </mat-card-header>
+            </mat-card-subtitle>
+        </div>
         <br>
         <mat-card-content class="field-group">
             <span class="fg-one-fifth" *ngFor="let map of mapData">

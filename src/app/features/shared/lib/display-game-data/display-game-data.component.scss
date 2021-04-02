@@ -1,3 +1,6 @@
+mat-card {
+    margin: 10px;
+}
 
 .column {
     float: left;
@@ -8,12 +11,6 @@
 .teamsTable {
     margin-left: 100px;
     padding: 5px;
-}
-
-.table {
-    width: 100%;
-    margin: auto;
-    text-align: center;
 }
 
 .list {
@@ -39,8 +36,17 @@
 .title {
     margin: 0 auto;
     text-align: center;
+    color: #B71C1C;
 }
 
 p {
     font-size: large;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    .column {
+        padding: 20px;
+    }
 }
