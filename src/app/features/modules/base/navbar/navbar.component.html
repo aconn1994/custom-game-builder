@@ -3,11 +3,10 @@
       <mat-icon>menu</mat-icon>
     </button>
     <span class="header" routerLink="/" (click)="sidenav.close()">Custom Game Randomizer</span>
-    <span class="example-spacer"></span>
+    <span class="spacer"></span>
   </mat-toolbar>
   <mat-sidenav-container class="container">
     <mat-sidenav #sidenav mode="push">
-      <h3 class="label">Choose your Game</h3>
         <mat-nav-list>
           <navigation-buttons (click)="sidenav.close()"></navigation-buttons>
         </mat-nav-list>

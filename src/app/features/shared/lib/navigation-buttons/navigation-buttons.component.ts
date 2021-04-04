@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationButtonsComponent implements OnInit {
   navigationData: any;
   gameData: any;
+  extrasData: any;
 
   constructor(
     private configService: ConfigService
@@ -17,9 +18,14 @@ export class NavigationButtonsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.navigationData.subscribe(game => {
-      this.gameData = game.games;
+    this.navigationData.subscribe(data => {
+      this.gameData = data.games;
+      this.extrasData = data.extras;
     });
+  }
+
+  public listOrder(index: number, list: any) {
+    return list.order;
   }
 
 }

@@ -1,3 +1,4 @@
+import { FootereComponent } from './features/modules/base/footer/footer.component';
 import { PlayerEnterComponent } from './features/shared/lib/form/players/player-enter/player-enter.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RouterModule } from '@angular/router';
@@ -32,6 +33,7 @@ import { PlayerEnterDialogComponent } from './features/shared/lib/form/players/p
     NavbarComponent,
     CustomGameComponent,
     HomeComponent,
+    FootereComponent,
     PlayerEnterComponent,
     PlayerEnterDialogComponent,
     DisplayGameDataComponent,
