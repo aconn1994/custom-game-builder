@@ -1,4 +1,4 @@
-import { RandomService } from '../../../services/random.service';
+import { RandomService } from '../../../../services/random.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormArray, FormGroup } from '@angular/forms';
 import { animate, state, style, transition, trigger } from '@angular/animations';
