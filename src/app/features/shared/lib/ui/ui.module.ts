@@ -1,6 +1,7 @@
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
 import { NgMaterialModule } from "src/app/modules/ng-material.module";
 import { UiComponents } from "./ui-components";
 
@@ -9,10 +10,11 @@ import { UiComponents } from "./ui-components";
         ...UiComponents,
     ],
     imports: [
-        BrowserModule,
+        CommonModule,
         FormsModule,
         NgMaterialModule,
         ReactiveFormsModule,
+        RouterModule
     ],
     exports: [
         ...UiComponents

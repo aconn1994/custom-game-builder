@@ -1,6 +1,4 @@
-import { GamesModule } from './features/modules/games/games.module';
 import { BaseModule } from './features/modules/base/base.module';
-import { UiModule } from './features/shared/lib/ui/ui.module';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RouterModule } from '@angular/router';
 import { NgMaterialModule } from './modules/ng-material.module';
@@ -14,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Services } from './features/services/services';
 import { environment } from 'src/environments/environment';
 import { FormComponentsModule } from './features/shared/lib/form/form-components.module';
+import { UiModule } from './features/shared/lib/ui/ui.module';
+import { GamesModule } from './features/modules/games/games.module';
 
 @NgModule({
   declarations: [

@@ -1,12 +1,12 @@
 
 <!-- <p>nav-buttons</p> -->
 <h3 class="label">Choose your Game</h3>
-<div class="button" *ngFor="let game of gameData; trackBy: listOrder">
+<div class="button" *ngFor="let game of gameData">
     <button mat-stroked-button routerLink='{{ game.path }}'>{{ game.name }}</button>
 </div>
 <br>
 <h3 class="label">More...</h3>
-<div class="button" *ngFor="let extra of extrasData; trackBy: listOrder">
+<div class="button" *ngFor="let extra of extrasData">
     <button mat-stroked-button routerLink='{{ extra.path }}'>{{ extra.name }}</button>
 </div>
 
