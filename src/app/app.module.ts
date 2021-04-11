@@ -1,3 +1,4 @@
+import { InfoModule } from './features/modules/info/info.module';
 import { BaseModule } from './features/modules/base/base.module';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RouterModule } from '@angular/router';
@@ -29,6 +30,7 @@ import { GamesModule } from './features/modules/games/games.module';
     BaseModule,
     GamesModule,
     RouterModule,
+    InfoModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
   ],

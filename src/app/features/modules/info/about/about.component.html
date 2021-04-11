@@ -1,0 +1,11 @@
+<h2>About Custom Game Builder</h2>
+
+<div *ngIf="systemOptions | async as options">
+    <mat-card>
+        <mat-card-content>
+            <p>{{ options.description }}</p>
+            <p> {{ options.salutation }}</p>
+            <p>{{ options.owner }}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
