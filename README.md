@@ -1,3 +1,7 @@
+**Live Build**
+
+https://custom-game-builder.web.app/
+
 **Custom-Game-Builder Demo**
 
 Thank you for visiting Custom Game Builder.  I built this app for a bunch of friends who play a lot of League of Legends custom games as a quicker way to make random teams.  The app is currently built using Angular 10.  After I built the initial randomizing form, I figured I’d take it a little further and implement a more “Angularized” architecture using multiple modules and lazy-loading for better performance.  Since then, this app has become a bit of an experiment for testing different Angular features.  I hope you find it useful/interesting.
